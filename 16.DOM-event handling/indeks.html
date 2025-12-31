@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM #5: Event Listeners</title>
+</head>
+
+<body>
+    <button onkeydown="alert('ini tombol pertama')">Ini button</button>
+    <button onkeyup="alert('ini tombol pertama')">Ini button</button>
+
+    <!-- tugas -->
+    <button id="key">Hammam</button>
+
+    <script>
+        const key = document.getElementById('key')
+        key.addEventListener('click', function () {
+            key.textContent = "Mister Rizad"
+            key.style.color = 'red'
+        })
+        key.addEventListener('dblclick', function () {
+            key.textContent = "Hammam"
+            key.style.color = 'black'
+            key.innerHTML = "<del>Hammam</del>"
+        })
+    </script>
+</body>
+
+</html>

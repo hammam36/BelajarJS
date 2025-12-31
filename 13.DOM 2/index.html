@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM #2</title>
+    <style>
+        .bg {
+            background-color: #fd0303;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="judul">Ini Judul</h1>
+    <h2 id="tajuk">Ini Tajuk</h2>
+    <h3>Ini Header level 3</h3>
+
+    <ul>
+        <li class="abc">Home</li>
+        <li class="efg">Home</li>
+        <li class="ijk">Home</li>
+    </ul>
+
+    <script>
+        const judul = document.getElementById('judul')
+        judul.textContent = 'Ini judul yang dirubah'
+        const tajuk = document.getElementById('tajuk')
+        tajuk.innerHTML = "<u>Ini Tajuk </u>"
+        const h3 = document.querySelector('h3')
+        h3.setAttribute("class", "bg",)
+        const classLi = document.getElementsByClassName('abc')
+        classLi[0].style.color = 'blue'
+        console.log(judul, tajuk, h3, classLi)
+    </script>
+</body>
+</html>
+
+<!-- 
+• textContent // untuk mengubah isi text saja
+• innerHTML // untuk mengubah isi text dan html tagnya
+• setAttribue // untuk mengubah atribut
+• style.color // untuk mengubah style, atau pada hal ini adalah warna
+-->

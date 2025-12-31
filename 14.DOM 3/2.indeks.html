@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM #3</title>
+</head>
+<body>
+    <h1 id="judul">DOM ID</h1>
+    <h1 class="kelas">DOM Class</h1>
+    <h1>DOM Tag Name</h1>
+    <p>Ini adalah paragraf</p>
+    <p class="second">Ini adalah paragraf</p>
+    <p id="third">Ini adalah paragraf</p>
+
+    <script>
+        // id
+        const h1 = document.getElementById("judul")
+        h1.style.color = "green"
+
+        // class
+        const kelas = document.getElementsByClassName("kelas")
+        console.log(kelas)
+        kelas[0].style.color = 'red'
+
+        // tag
+        const tag = document.getElementsByTagName('h1')
+        console.log(tag[2])
+        tag[2].style.color = 'purple'
+
+        // query selestor // bisa mendapatkan apapun tapi mengikuti aturan pemanggilan selector seperti di CSS
+        const p = document.querySelector('p', 'p.second', 'p#third')
+        p.style.color = "orange"
+
+        // query selector all
+        const semua = document.querySelectorAll('p')
+        semua[2].style.color = "blue"
+    </script>
+</body>
+</html>

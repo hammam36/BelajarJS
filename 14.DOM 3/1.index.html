@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM #3</title>
+</head>
+<body>
+    <div id="divKosong"></div>
+
+    <ul>
+        <li class="tumbal">Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+    </ul>
+    
+    <script>
+        const newParagraf = document.createElement('p')
+        newParagraf.textContent = "Ini paragraf Via JS"
+        const divKosong = document.getElementById('divKosong')
+        divKosong.appendChild(newParagraf)
+        const ul = document.querySelector('ul')
+        ul.appendChild(newList)
+        const tumbal = document.querySelector(li.tumbal)
+        const liBaruBefore = document.createElement('li')
+        liBaruBefore.textContent = "Baru"
+        ul.insertBefore(liBaruBefore, tumbal)
+    </script>
+</body>
+</html>
+<!-- 
+• createElement() : digunakan untuk membuat elemen baru
+• appendChild() : digunakan untuk menambahkan elemen baru ke dalam elemen yang sudah ada
+
+• insertBefore() : digunakan untuk menambahkan elemen baru ke dalam elemen yang sudah ada, tapi elemen baru akan berada di sebelum elemen yang sudah ada
+-->

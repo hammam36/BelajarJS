@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Js</title>
+</head>
+<body>
+    <h1 id="judul">Ini Judul</h1>
+    <p class="paragraf">Ini paragraf</p>
+
+    <ul>
+        <li class="bbq">home</li>
+        <li>home</li>
+        <li>home</li>
+    </ul>
+
+    <script>
+        const judul = document.getElementById('judul')
+        const paragraf = document.getElementsByClassName('paragraf')
+        const menu = document.getElementsByTagName('li')
+        const query = document.querySelector('li')
+        const queryAll = document.querySelectorAll('li')
+        console.log(judul, paragraf, menu, query, queryAll)
+    </script>
+</body>
+</html>
+<!-- 
+• getElementById // memanggil dari nama ID
+• getElementsByClassName // memanggil dari nama Class
+• getElementsByTagName // memanggil dari nama Tag
+• querySelector // memanggil dari nama TagName, hanya satu dan yang paling pertama
+• querySelectorAll // memanggil dari semua nama TagName
+-->
+
+<!-- HTMLCollection di console maksudnya adalah array atau dari nama semua kelas yang sama -->

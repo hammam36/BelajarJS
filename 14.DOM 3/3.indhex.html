@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM #3</title>
+</head>
+
+<body>
+    <!-- Membuat li baru di dalam ul -->
+    <ul>
+        <li>First</li>
+        <li id="secondLi">Second</li>
+        <li>Thrird</li>
+    </ul>
+
+    <script>
+        // appendChild() harus digunakan lewat parentnya
+        // Jika tidak ada parent, maka harus membuat parent baru
+        const li = document.createElement('li')
+        li.textContent = 'Ini List Tambahan 1'
+        // Manggil Ortu Buat Adopsi
+        const ul = document.querySelector('ul')
+        ul.appendChild(li)
+        // Tambah Li ke-4
+        const li2 = document.createElement('li')
+        li2.textContent = "Ini List Via Js 2"
+        ul.appendChild(li2)
+        // Tambah Li ke-5 dengan insert before
+        const li3 = document.createElement('li')
+        li3.textContent = "Ini List Via Js 3"
+        ul.insertBefore(li3, document.getElementById("secondLi"))
+    </script>
+</body>
+
+</html>

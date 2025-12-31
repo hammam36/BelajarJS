@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM #4: Traversal</title>
+</head>
+<body>
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+    </ul>
+
+    <script>
+        const li = document.querySelector('li')
+        console.log(li.parentElement)
+        // parent.Element untuk mendapatkan parent element
+        console.log(li.parentElement.parentElement)
+        // children untuk mendapatkan child element
+        const body = document.querySelector('body')
+        console.log(body.children)
+        // firstElementChild untuk mendapatkan child element pertama
+        // lastElementChild untuk mendapatkan child element terakhir
+        const ul = document.querySelector("ul")
+        console.log(ul.firstElementChild, ul.lastElementChild)
+        // nextElementSibling untuk mendapatkan sibling element berikutnya
+        // previousElementSibling untuk mendapatkan sibling element sebelumnya
+        const list = document.querySelectorAll('li')
+        console.log(list[0].nextElementSibling, list[2].previousElementSibling)
+    </script>
+</body>
+</html>

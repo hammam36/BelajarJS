@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warna {
+            color: salmon;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .bg {
+            background-color: aqua;
+            border: 3px solid navajowhite;
+        }
+    </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <button id="tombol">
+        pencet saya
+    </button>
+    <!-- dengan tailwind -->
+    <button id="tombol2">😩 tekan aku!</button>
+
+    <script>
+        // classList.add untuk menambahkan class yang sudah dibuat di <style>
+        // classList.remove untuk menghapus class yang sudah dibuat
+        // classList.toggle untuk menambahkan class jika sebelumnya tidak punya kelas, 
+        // dan menghapus kelas jika sebelumnya sudah punya kelas (hanya bisa satu kelas)
+        const tombol = document.getElementById('tombol')
+        tombol.addEventListener('click', function () {
+            tombol.classList.add('warna', 'bg')
+        })
+        tombol.addEventListener('dblclick', function () {
+            tombol.classList.remove('warna', 'bg')
+        })
+        // dengan tailwind
+        const tombol2 = document.getElementById('tombol2')
+        tombol2.addEventListener('click', function () {
+            tombol2.classList.toggle('bg-blue-500')
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM #5: Event Handling & Listeners</title>
+</head>
+
+<body>
+    <!-- ini inline -->
+    <!-- inline menggunakan on event -->
+    <button onclick="alert(`ini inline cok`)">Ini Button</button>
+    <button ondblclick="alert(`ini double click`)">Ini Button 2click</button>
+    <!-- ini mouse over -->
+    <h1 id="hoverJs">Hambar</h1>
+
+    <!-- ini external/embedded -->
+    <button id="external">Ini Button External</button>
+    <input id="inputbutton" type="button" value="ini input button">
+    <script>
+        // <!-- menggunakan addEventListener --> 
+        const tombol = document.getElementById(`external`)
+        tombol.addEventListener("click", function () {
+            alert(`ini external cok`)
+        })
+        const butang = document.querySelector("#inputbutton")
+        butang.addEventListener("click", function () {
+            alert(`ini input button cok`)
+        })
+        // mouse over dan mouse out
+        const hover = document.getElementById(`hoverJs`)
+        hover.addEventListener("mouseover", function () {
+            hover.style.color = 'red'
+        })
+        hover.addEventListener("mouseout", function () {
+            hover.style.color = 'black'
+        })
+    </script>
+</body>
+
+</html>
